@@ -1,6 +1,6 @@
 const container = document.querySelector('.container');
 
-const pokemonCount = 150;
+const pokemonCount = 500;
 const colors = {
     fire: '#FDDFDF',
     grass: '#DEFDE0',
@@ -48,14 +48,13 @@ const createPokemonCard = (poke) => {
 
     const pokemonInnerHTML = 
     `<div class="img-container">
-    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${poke.id}.png" alt="${name}">
-</div>
-<div class="info">
-    <div class="number">#${id}</div>
-    <h3 class="name">${name}</h3>
-    <small class="type">type: <span>${type}</span></small>
-</div>
-    `
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${poke.id}.png" alt="${name}">
+    </div>
+    <div class="info">
+        <div class="number">#${id}</div>
+        <h3 class="name">${name}</h3>
+        <small class="type">Tipo: <span>${type}</span></small>
+    </div>`
 
     card.innerHTML = pokemonInnerHTML
     container.appendChild(card)
